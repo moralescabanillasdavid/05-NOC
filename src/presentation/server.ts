@@ -7,7 +7,7 @@ export class Server {
         console.log('Server started...');
 
         CronService.createJob('*/5 * * * * *', () => {
-            new CheckService().execute('https://google.com')
+            new CheckService().execute('http://localhost:3000/posts')
         });
 
         
